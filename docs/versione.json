@@ -1,0 +1,29 @@
+{
+  "versionCode": 3,
+  "versionName": "0.3",
+  "novita": [
+    "Benvenuto con il faro: l'app chiede il nome e saluta",
+    "Impostazioni dall'ingranaggio della libreria",
+    "Aggiornamento dall'app"
+  ],
+  "completo": {
+    "url": "https://github.com/faro-edu/faro-reader/releases/download/v0.3/FaroReader.apk",
+    "bytes": 553560818,
+    "sha256": "6e24cb4a8321e20db2d3db6611262f55d9c3abd853e21698e45a246cdf8d655f"
+  },
+  "leggero": {
+    "url": "https://github.com/faro-edu/faro-reader/releases/download/v0.3/FaroReader-leggero.apk",
+    "bytes": 42823562,
+    "sha256": "d8594b354b772568db78618b0742224e153f3f18af63a852830268a69f823800"
+  },
+  "voci": {
+    "models/paola.ctl.onnx": 63153907,
+    "models/paola.dur.onnx": 27777366,
+    "pocket/models/24l-int8/bos.f32": 4096,
+    "pocket/models/24l-int8/flow_head.onnx": 39201724,
+    "pocket/models/24l-int8/flow_step.onnx": 304399909,
+    "pocket/models/24l-int8/mimi_step.onnx": 41329778,
+    "pocket/models/24l-int8/text_emb.f32": 16388096,
+    "pocket/voices/24l/giovanni.f32": 18481152
+  }
+}
