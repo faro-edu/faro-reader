@@ -1,0 +1,43 @@
+name: L'app si comporta male
+description: Si blocca, non apre un libro, un tasto non risponde, la voce si ferma
+title: "App: "
+labels: ["errore"]
+body:
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa è successo
+      description: Racconta con parole tue cosa stavi facendo e cosa è andato storto.
+    validations:
+      required: true
+  - type: textarea
+    id: atteso
+    attributes:
+      label: Cosa ti aspettavi
+  - type: input
+    id: dispositivo
+    attributes:
+      label: Dispositivo
+      description: Marca e modello, telefono o tablet. Esempio "tablet Samsung Tab S9".
+    validations:
+      required: true
+  - type: input
+    id: versione
+    attributes:
+      label: Versione di Farō Reader
+      description: La trovi nella pagina da cui hai scaricato l'app. Esempio "0.1".
+  - type: dropdown
+    id: voce
+    attributes:
+      label: Voce in uso
+      options:
+        - Giovanni
+        - Paola
+        - Una voce aggiunta da me
+        - Non lo so
+  - type: checkboxes
+    id: ripete
+    attributes:
+      label: Succede ancora?
+      options:
+        - label: Sì, succede ogni volta che riprovo

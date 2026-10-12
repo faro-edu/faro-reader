@@ -1,0 +1,34 @@
+name: Una parola letta male
+description: Accento sbagliato, pausa strana, numero o sigla letti in modo sbagliato
+title: "Lettura: "
+labels: ["lettura"]
+body:
+  - type: textarea
+    id: frase
+    attributes:
+      label: La frase
+      description: Copia la frase del libro, così com'è scritta.
+    validations:
+      required: true
+  - type: input
+    id: sbagliato
+    attributes:
+      label: Cosa hai sentito
+      description: Scrivi come l'ha detta la voce. Esempio "ha detto àncora invece di ancóra".
+    validations:
+      required: true
+  - type: dropdown
+    id: voce
+    attributes:
+      label: Voce
+      options:
+        - Giovanni
+        - Paola
+        - Una voce aggiunta da me
+    validations:
+      required: true
+  - type: input
+    id: libro
+    attributes:
+      label: Libro e capitolo
+      description: Facoltativo. Ci aiuta a ritrovare il punto.

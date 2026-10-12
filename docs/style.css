@@ -1,0 +1,99 @@
+/* Farō Reader: stessa palette dell'app. Nessuna risorsa esterna: caratteri e icona stanno accanto alla pagina. */
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/atkinson-regular.ttf"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/atkinson-bold.ttf"); font-weight: 700; font-display: swap; }
+
+:root {
+  --notte: #0F2530; --abisso: #16343F; --marea: #2F6F73; --lanterna: #F5B841;
+  --bg: #F4F6F2; --surface: #FFFFFF; --band: #E9EEEA; --fg: #1D2B30; --muted: #4F6063; --line: #D3DCD7;
+  --accent: #24666B; --paper: #FBFAF5; --veil: rgba(245, 184, 65, .2); --word-fg: #1D2B30;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F2530; --surface: #16343F; --band: #132D38; --fg: #E6ECE8; --muted: #A9BABA; --line: #274853;
+    --accent: #7FC4C2; --paper: #16343F; --veil: rgba(245, 184, 65, .12); --word-fg: #0F2530;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 400 1.125rem/1.65 "Atkinson Hyperlegible", Verdana, sans-serif;
+  letter-spacing: .02em; word-spacing: .06em;
+}
+a { color: var(--accent); text-underline-offset: .2em; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--lanterna); outline-offset: 3px; }
+h1, h2, h3 { line-height: 1.2; margin: 0; letter-spacing: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 5vw, 3.1rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+h3 { font-size: 1.15rem; }
+p { margin: 0; }
+
+.top {
+  display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between;
+  max-width: 1080px; margin: 0 auto; padding: 16px 20px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--fg); text-decoration: none; font-size: 1.2rem; }
+.brand img { border-radius: 10px; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.top nav a { color: var(--fg); text-decoration: none; padding: 8px 0; }
+.top nav a:hover { text-decoration: underline; }
+
+main { display: flex; flex-direction: column; }
+section { max-width: 1080px; width: 100%; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 20px; }
+.band { max-width: none; background: var(--band); }
+.band > * { max-width: 1040px; width: 100%; margin-inline: auto; }
+.eyebrow { font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.prose { display: flex; flex-direction: column; gap: 14px; max-width: 60ch; }
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 46ch; }
+.small { font-size: .95rem; color: var(--muted); }
+
+.hero { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 40px; padding-top: 40px; }
+.hero-text { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 16px;
+  border: 2px solid var(--accent); color: var(--accent); font-weight: 700; text-decoration: none;
+}
+.btn.primary { background: var(--lanterna); border-color: var(--lanterna); color: #0F2530; }
+
+/* la pagina in lettura: velo sulla frase, ambra sulla parola, filo a margine */
+.demo {
+  flex: 1 1 320px; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 24px;
+  padding: 28px 26px 28px 20px; display: flex; flex-direction: column; gap: 14px; letter-spacing: .035em; word-spacing: .12em;
+}
+.demo p { border-left: 3px solid transparent; padding-left: 14px; }
+.demo .ready { border-left-color: var(--marea); }
+.demo .now { border-left-color: var(--lanterna); }
+.demo .working { border-left: 3px dotted var(--marea); }
+.sent { background: var(--veil); border-radius: 4px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.word { background: var(--lanterna); color: var(--word-fg); border-radius: 4px; padding: 1px 3px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.cards > div { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.cards p { color: var(--muted); font-size: 1.02rem; }
+
+.rules { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px 36px; }
+.rules div { display: flex; flex-direction: column; gap: 4px; }
+.rules dt { font-weight: 700; }
+.rules dd { margin: 0; color: var(--muted); font-size: 1.02rem; }
+
+.facts { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; max-width: 64ch; }
+
+.voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.voices article { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.tag { align-self: flex-start; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); border-radius: 99px; padding: 1px 10px; }
+.voices p:not(.tag) { color: var(--muted); }
+
+/* il laboratorio è separato a vista: bordo tratteggiato, non una scheda piena */
+.lab { border: 2px dashed var(--line); border-radius: 24px; margin-block: 24px; padding: 36px 24px; width: calc(100% - 40px); }
+.steps { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; max-width: 60ch; }
+.note { background: var(--band); border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; max-width: 64ch; }
+.empty { color: var(--muted); max-width: 60ch; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 20px 40px; text-align: center; color: var(--muted); }
+
+.btn[aria-disabled="true"] { opacity: .6; cursor: default; }

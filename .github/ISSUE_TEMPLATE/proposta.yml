@@ -1,0 +1,16 @@
+name: Un'idea
+description: Qualcosa che renderebbe la lettura più facile
+title: "Idea: "
+labels: ["proposta"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: La tua idea
+    validations:
+      required: true
+  - type: textarea
+    id: perche
+    attributes:
+      label: A chi servirebbe e perché
+      description: Facoltativo. Raccontaci la situazione in cui ti è venuta in mente.

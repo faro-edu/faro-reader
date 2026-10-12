@@ -1,0 +1,34 @@
+name: Proponi una voce per la comunità
+description: Regala la tua voce a chi usa Farō Reader (parte non ufficiale)
+title: "Voce: "
+labels: ["voce della comunità"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Le voci della comunità non sono voci ufficiali: le pubblichiamo così come arrivano.
+        Accettiamo solo voci di persone che sono d'accordo.
+  - type: input
+    id: nome
+    attributes:
+      label: Nome da dare alla voce
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: Pacchetto della voce
+      description: Trascina qui il file zip creato seguendo la guida.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consenso
+    attributes:
+      label: Dichiarazione
+      options:
+        - label: La voce è mia, oppure la persona registrata mi ha dato il suo consenso scritto.
+          required: true
+        - label: La registrazione non viene da audiolibri, video, trasmissioni o altri servizi.
+          required: true
+        - label: Accetto che la voce sia pubblicata e scaricabile gratuitamente da chiunque.
+          required: true
