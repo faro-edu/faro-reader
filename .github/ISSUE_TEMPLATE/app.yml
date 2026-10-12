@@ -32,7 +32,7 @@ body:
       label: Voce in uso
       options:
         - Giovanni
-        - Paola
+        - Valentina
         - Una voce aggiunta da me
         - Non lo so
   - type: checkboxes

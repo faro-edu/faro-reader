@@ -11,10 +11,10 @@ Ultima verifica sulle fonti originali: 12 ottobre 2026.
 | Pocket TTS, modello `italian_24l` | Kyutai | CC BY 4.0 | <https://huggingface.co/kyutai/pocket-tts> |
 | Pocket TTS, codice | Kyutai | MIT | <https://github.com/kyutai-labs/pocket-tts> |
 | Voce **Giovanni** | registrazione dal corpus Mozilla Common Voice (italiano), voce predefinita di Pocket TTS | CC0 (Common Voice) | <https://commonvoice.mozilla.org> |
-| Voce **Paola**, modello `it_IT-paola-medium` | progetto Piper; dati di Paola Persico | dati: CC0 | <https://huggingface.co/rhasspy/piper-voices> · <https://huggingface.co/datasets/paolapersico1/Voice-Dataset-Italian> |
+| Voce **Valentina** (nome originale: voce "paola" di Piper, modello `it_IT-paola-medium`) | progetto Piper; dati di Paola Persico | dati: CC0 | <https://huggingface.co/rhasspy/piper-voices> · <https://huggingface.co/datasets/paolapersico1/Voice-Dataset-Italian> |
 | Piper, codice | Rhasspy | MIT | <https://github.com/rhasspy/piper> |
 
-Il modello di Paola è stato ottenuto dai suoi autori affinando la voce inglese "lessac" di Piper.
+In Farō Reader la voce "paola" di Piper si chiama Valentina. Il modello è stato ottenuto dai suoi autori affinando la voce inglese "lessac" di Piper.
 
 Kyutai chiede che i suoi modelli non siano usati per imitare o clonare una voce senza il consenso esplicito della persona. È anche la nostra regola: vedi la [guida alle voci](voci/GUIDA.md).
 
@@ -22,11 +22,9 @@ Kyutai chiede che i suoi modelli non siano usati per imitare o clonare una voce 
 
 | Parte | Autore | Licenza | Fonte |
 |---|---|---|---|
-| UDPipe 1, codice | Istituto di linguistica formale e applicata, Università Carolina di Praga | MPL 2.0 | <https://github.com/ufal/udpipe> |
-| UDPipe, modello italiano ISDT | come sopra, da Universal Dependencies | CC BY-NC-SA 4.0 | <https://ufal.mff.cuni.cz/udpipe/1/models> |
-| Dizionario degli accenti | costruito da noi a partire da WikiPron (dati di Wikizionario) e da un elenco di frequenza delle parole | dati di Wikizionario: CC BY-SA 4.0 | <https://github.com/CUNY-CL/wikipron> · <https://github.com/hermitdave/FrequencyWords> |
+| Dizionario degli accenti, pubblicato in [`dizionario/`](dizionario/) | costruito da noi a partire da WikiPron (dati di Wikizionario) e da un elenco di frequenza delle parole | CC BY-SA 4.0 | <https://github.com/CUNY-CL/wikipron> · <https://github.com/hermitdave/FrequencyWords> |
 
-Il modello italiano di UDPipe è distribuito solo per uso non commerciale: Farō Reader lo usa così com'è, senza modifiche.
+Numeri in lettere, pause e scelta della pronuncia secondo la frase sono regole scritte da noi.
 
 ## Motore e librerie dell'app
 
@@ -55,4 +53,4 @@ L'edizione elettronica è dell'associazione [Liber Liber](https://www.liberliber
 ## Strumenti usati solo durante lo sviluppo
 
 Non sono dentro l'app: sono serviti a costruire e controllare il dizionario e le voci.
-eSpeak NG (GPL 3.0), num2words (LGPL 2.1), Praat, Whisper.
+eSpeak NG (GPL 3.0), num2words (LGPL 2.1), UDPipe (codice MPL 2.0, modello italiano CC BY-NC-SA 4.0), Praat, Whisper.

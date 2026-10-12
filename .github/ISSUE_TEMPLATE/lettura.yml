@@ -23,7 +23,7 @@ body:
       label: Voce
       options:
         - Giovanni
-        - Paola
+        - Valentina
         - Una voce aggiunta da me
     validations:
       required: true
