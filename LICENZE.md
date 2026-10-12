@@ -1,6 +1,6 @@
 # Crediti e licenze
 
-Farō Reader è gratuito e non ha scopo commerciale. Poggia sul lavoro di altri: qui c'è l'elenco completo, con la licenza di ogni parte e il collegamento alla fonte.
+Farō Reader poggia sul lavoro di altri: qui c'è l'elenco completo, con la licenza di ogni parte e il collegamento alla fonte.
 
 Ultima verifica sulle fonti originali: 12 ottobre 2026.
 
