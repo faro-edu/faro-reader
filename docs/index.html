@@ -77,7 +77,7 @@
   <div class="prose">
     <p>Versione di prova <strong>0.1</strong>. Funziona, ma è giovane: se qualcosa non va, <a href="#segnala">diccelo</a>.</p>
   </div>
-  <p class="actions"><a class="btn primary" data-release="FaroReader.apk" href="#scarica">Scarica l'APK (577 MB)</a></p>
+  <p class="actions"><a class="btn primary" data-release="FaroReader.apk" href="#scarica">Scarica l'APK (553 MB)</a></p>
   <ul class="facts">
     <li><strong>Serve</strong> Android 9 o più recente, su telefono o tablet a 64 bit, con circa 1,2 GB liberi.</li>
     <li><strong>Dentro ci sono</strong> l'app, due voci (Giovanni e Valentina) e un libro di prova (Pinocchio).</li>
@@ -165,7 +165,7 @@
 // Repository pubblico su GitHub: segnalazioni, guida e download partono da qui.
 const REPO = "faro-edu/faro-reader";
 // Diventa true quando la prima versione è pubblicata tra le Releases.
-const PUBBLICATA = false;
+const PUBBLICATA = true;
 if (REPO) {
   const base = "https://github.com/" + REPO + "/";
   document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = base + a.dataset.repoPath; });
