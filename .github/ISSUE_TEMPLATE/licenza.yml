@@ -1,0 +1,38 @@
+name: Chiedi la licenza
+description: La versione completa di Farō Reader, per aggiungere i tuoi EPUB e leggere a turno
+title: "Licenza: "
+labels: ["licenza"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questa richiesta è pubblica: chiunque può leggerla.
+        Non scrivere telefono, indirizzo o nomi di bambini. Ti rispondiamo qui sotto.
+  - type: dropdown
+    id: chi
+    attributes:
+      label: Per chi è
+      options:
+        - Una famiglia
+        - Una scuola o una classe
+        - Uno studio o un'associazione
+        - Altro
+    validations:
+      required: true
+  - type: input
+    id: intestatario
+    attributes:
+      label: A chi intestiamo la licenza
+      description: Il nome compare nell'app, in Impostazioni. Esempio "Famiglia Rossi", "Scuola Collodi, classe 4B".
+    validations:
+      required: true
+  - type: input
+    id: dispositivi
+    attributes:
+      label: Su quanti dispositivi
+    validations:
+      required: true
+  - type: textarea
+    id: altro
+    attributes:
+      label: Vuoi dirci altro?
