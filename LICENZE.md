@@ -48,7 +48,7 @@ Tutti con SIL Open Font License 1.1, usati senza modifiche.
 ## Libro di prova
 
 *Le avventure di Pinocchio* di Carlo Collodi, illustrato da Enrico Mazzanti: testo di pubblico dominio.
-L'edizione elettronica è dell'associazione [Liber Liber](https://www.liberliber.it), che distribuisce impaginazione e copertina con licenza CC BY-NC-SA 4.0.
+Il testo è stato preso dall'edizione elettronica dell'associazione [Liber Liber](https://www.liberliber.it), tratta dalla seconda edizione Rizzoli (Milano, 1949). Impaginazione e copertina sono nostre.
 
 ## Strumenti usati solo durante lo sviluppo
 
