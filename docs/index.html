@@ -105,6 +105,19 @@
   <p class="eyebrow">Voci ufficiali</p>
   <h2>Le voci che seguiamo noi</h2>
   <div class="prose"><p>Sono già dentro l'app. Le abbiamo provate su libri interi e correggiamo noi la loro pronuncia.</p></div>
+  <div class="player" id="ascolta" hidden>
+    <div class="player-bar">
+      <button class="btn primary" type="button" id="ascolta-play" aria-pressed="false">Ascolta</button>
+      <fieldset class="seg">
+        <legend>Voce</legend>
+        <label><input type="radio" name="voce" value="giovanni" checked><span>Giovanni</span></label>
+        <label><input type="radio" name="voce" value="valentina"><span>Valentina</span></label>
+      </fieldset>
+    </div>
+    <div class="demo" id="ascolta-testo" aria-label="I promessi sposi, capitolo primo"></div>
+    <p class="small">Alessandro Manzoni, <cite>I promessi sposi</cite>, capitolo primo. Tocca una parola per ripartire da lì.</p>
+    <audio id="ascolta-audio" preload="none"></audio>
+  </div>
   <div class="voices">
     <article>
       <h3>Giovanni</h3>
@@ -176,6 +189,74 @@
   <p><strong>Farō</strong> · strumenti che guidano senza giudicare.</p>
 </footer>
 
+<script src="demo/voci.js"></script>
+<script>
+// Lettura di prova: la luce segue i tempi veri di ogni parola; il filo a margine finge il lavoro dell'app sulle frasi dopo.
+(function () {
+  const D = window.DEMO_VOCI, box = document.getElementById("ascolta");
+  if (!D || !box) return;
+  const audio = document.getElementById("ascolta-audio"), play = document.getElementById("ascolta-play");
+  const testo = document.getElementById("ascolta-testo");
+  const words = [], pars = [], first = [];
+  D.blocchi.forEach((b, k) => {
+    const p = document.createElement("p"), s = document.createElement("span");
+    first.push(words.length);
+    b.forEach((w, i) => {
+      const el = document.createElement("span");
+      el.className = "w"; el.textContent = w; el.dataset.i = words.length;
+      words.push(el); s.append(el, i < b.length - 1 ? " " : "");
+    });
+    p.append(s); testo.append(p); pars.push(p);
+  });
+  let T = D.voci.giovanni.t, cur = -1, raf = 0;
+  const blockOf = i => { let k = 0; while (k + 1 < first.length && first[k + 1] <= i) k++; return k; };
+  const start = k => T[first[k]][0];
+  // la frase k è pronta quando la voce è a metà della frase prima; quella dopo è in lavorazione
+  const readyAt = k => k === 0 ? 0 : (start(k - 1) + start(k)) / 2;
+  function draw() {
+    const t = audio.currentTime || 0;
+    let i = -1;
+    while (i + 1 < T.length && T[i + 1][0] <= t) i++;
+    const on = !audio.paused || t > 0, now = on ? blockOf(Math.max(i, 0)) : -1;
+    pars.forEach((p, k) => {
+      const ready = k <= now || t >= readyAt(k), working = !ready && (k === 0 || t >= readyAt(k - 1));
+      p.className = k === now ? "now" : ready ? "ready" : working ? "working" : "";
+      p.firstChild.className = k === now ? "sent" : "";
+    });
+    if (i !== cur) {
+      if (cur >= 0) words[cur].classList.remove("on");
+      if (i >= 0 && on) words[i].classList.add("on");
+      cur = on ? i : -1;
+    }
+  }
+  const loop = () => { draw(); raf = audio.paused ? 0 : requestAnimationFrame(loop); };
+  function setVoice(name, keep) {
+    const i = Math.max(cur, 0), was = !audio.paused;
+    T = D.voci[name].t;
+    audio.src = D.voci[name].audio;
+    if (keep) {
+      audio.preload = "auto";
+      audio.addEventListener("loadedmetadata", () => { audio.currentTime = T[i][0]; if (was) audio.play().catch(() => {}); else draw(); }, { once: true });
+      audio.load();
+    }
+  }
+  play.addEventListener("click", () => audio.paused ? audio.play().catch(() => {}) : audio.pause());
+  audio.addEventListener("play", () => { play.textContent = "Pausa"; play.setAttribute("aria-pressed", "true"); if (!raf) loop(); });
+  audio.addEventListener("pause", () => { play.textContent = "Ascolta"; play.setAttribute("aria-pressed", "false"); draw(); });
+  audio.addEventListener("seeked", draw);
+  audio.addEventListener("ended", () => { audio.currentTime = 0; draw(); });
+  box.querySelectorAll("input[name=voce]").forEach(r => r.addEventListener("change", () => setVoice(r.value, cur >= 0)));
+  testo.addEventListener("click", e => {
+    const w = e.target.closest(".w");
+    if (!w) return;
+    const go = () => { audio.currentTime = T[+w.dataset.i][0]; audio.play().catch(() => {}); };
+    if (audio.readyState) go(); else { audio.preload = "auto"; audio.addEventListener("loadedmetadata", go, { once: true }); audio.load(); }
+  });
+  setVoice("giovanni", false);
+  box.hidden = false;
+  draw();
+})();
+</script>
 <script>
 // Repository pubblico su GitHub: segnalazioni, guida e download partono da qui.
 const REPO = "faro-edu/faro-reader";
