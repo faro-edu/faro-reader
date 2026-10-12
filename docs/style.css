@@ -76,6 +76,9 @@ section { max-width: 1080px; width: 100%; margin: 0 auto; padding: 56px 20px; di
 .cards > div { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
 .cards p { color: var(--muted); font-size: 1.02rem; }
 
+/* citazione: più grande del testo, mai in corsivo */
+.quote { margin: 28px 0 0; padding-left: 24px; border-left: 4px solid var(--lanterna); max-width: 36ch; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.4; letter-spacing: .01em; }
+
 .rules { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px 36px; }
 .rules div { display: flex; flex-direction: column; gap: 4px; }
 .rules dt { font-weight: 700; }
