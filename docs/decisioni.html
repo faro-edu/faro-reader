@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Farō Reader, le decisioni</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="./"><img src="icon.svg" alt="" width="36" height="36"> Farō Reader</a>
+  <nav aria-label="Sezioni"><a href="./#licenze">Torna a crediti e licenze</a></nav>
+</header>
+
+<main>
+
+<section>
+  <p class="eyebrow">Dietro le quinte</p>
+  <h1>Le decisioni dietro la pubblicazione</h1>
+  <div class="prose">
+    <p class="lead">Prima di rendere pubblico Farō Reader abbiamo controllato una per una le parti di cui è fatto. Qui c'è scritto cosa abbiamo trovato e cosa abbiamo deciso.</p>
+    <p>Verifiche fatte sulle fonti originali il 12 ottobre 2026. Le abbiamo fatte leggendo le licenze con attenzione: non sono un parere legale.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Cosa abbiamo deciso</h2>
+  <dl class="rules decisions">
+    <div><dt>1. Gratuito, senza pubblicità</dt><dd>Farō Reader non ha scopo commerciale. Non si paga, non mostra pubblicità, non raccoglie dati.</dd></div>
+    <div><dt>2. Tutto sul dispositivo</dt><dd>L'app non chiede il permesso di usare internet. Libri, voci e segnalibri restano dove sono.</dd></div>
+    <div><dt>3. Si dice sempre da dove viene ogni cosa</dt><dd>Ogni parte che non è nostra è elencata con autore, licenza e fonte in <a data-repo-path="blob/main/LICENZE.md" href="./#licenze">Crediti e licenze</a>.</dd></div>
+    <div><dt>4. Numeri in lettere scritti da zero</dt><dd>Per leggere "1918" come "millenovecentodiciotto" usavamo l'adattamento di una libreria con licenza LGPL. Quella licenza chiede di poter sostituire la libreria dentro l'app, cosa che un'app chiusa non permette. Abbiamo riscritto questa parte partendo dalle regole dell'italiano.</dd></div>
+    <div><dt>5. Analisi della frase con regole nostre</dt><dd>Per scegliere tra "àncora" e "ancóra" e per mettere le pause usavamo un analizzatore il cui modello italiano è concesso solo per uso non commerciale. L'abbiamo sostituito con regole scritte da noi. Sono meno precise, ma non portano vincoli.</dd></div>
+    <div><dt>6. Giovanni</dt><dd>È la voce italiana predefinita di Pocket TTS di Kyutai. Nasce da una registrazione di Mozilla Common Voice, donata con licenza CC0. Il modello è CC BY 4.0.</dd></div>
+    <div><dt>7. Valentina</dt><dd>È la voce "paola" del progetto Piper, che nell'app abbiamo chiamato Valentina. I dati della voce sono CC0. Il modello è stato ottenuto dai suoi autori partendo da una voce inglese di Piper, a sua volta nata da un archivio concesso per scopi di ricerca. Piper la distribuisce pubblicamente; noi la teniamo e lo dichiariamo.</dd></div>
+    <div><dt>8. Voci solo con il consenso</dt><dd>Una voce è di una persona. Non pubblichiamo voci ricavate da audiolibri, video o altri servizi, e alle voci della comunità chiediamo una dichiarazione di consenso. Durante lo sviluppo abbiamo tolto una voce di prova proprio perché veniva da un audiolibro in commercio.</dd></div>
+    <div><dt>9. Il dizionario è di tutti</dt><dd>Il dizionario degli accenti nasce dai dati di Wikizionario. Lo pubblichiamo con la stessa licenza, CC BY-SA 4.0, perché chiunque possa usarlo e correggerlo.</dd></div>
+    <div><dt>10. Pinocchio in edizione nostra</dt><dd>Il testo è di pubblico dominio e l'abbiamo preso dall'edizione elettronica di Liber Liber, che ringraziamo. Impaginazione e copertina sono nostre.</dd></div>
+    <div><dt>11. Il codice dell'app, per ora, non è pubblico</dt><dd>Sono pubblici il sito, le segnalazioni, la guida alle voci e il dizionario. Sul codice decideremo più avanti.</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2>Cosa abbiamo verificato</h2>
+  <div class="tw"><table>
+    <tr><th>Parte</th><th>Cosa abbiamo trovato</th><th>Dove l'abbiamo letto</th></tr>
+    <tr><td>Pocket TTS, modello</td><td>CC BY 4.0. Vieta di clonare o imitare una voce senza consenso esplicito.</td><td>Scheda del modello di Kyutai</td></tr>
+    <tr><td>Pocket TTS, codice</td><td>MIT</td><td>File di licenza del pacchetto</td></tr>
+    <tr><td>Voce Giovanni</td><td>Registrazione di Mozilla Common Voice (CC0)</td><td>Codice di Pocket TTS</td></tr>
+    <tr><td>Voce Valentina, dati</td><td>CC0</td><td>Scheda del dataset</td></tr>
+    <tr><td>Voce Valentina, modello</td><td>Affinato dalla voce inglese "lessac" di Piper, il cui archivio di partenza è concesso per ricerca</td><td>Scheda del modello Piper, licenza dell'archivio</td></tr>
+    <tr><td>ONNX Runtime</td><td>MIT</td><td>Repository</td></tr>
+    <tr><td>Caratteri</td><td>SIL OFL 1.1, tutti e quattro</td><td>File di licenza nei repository</td></tr>
+    <tr><td>Dati di Wikizionario</td><td>CC BY-SA 4.0</td><td>Repository di WikiPron</td></tr>
+    <tr><td>Pinocchio</td><td>Testo di pubblico dominio</td><td>Pagina delle licenze di Liber Liber</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Se abbiamo sbagliato qualcosa</h2>
+  <div class="prose">
+    <p>Se sei l'autore di una delle parti che usiamo e pensi che l'abbiamo citata male o usata in un modo che non va, <a data-repo-path="issues/new?template=app.yml" href="./#segnala">scrivicelo</a>: la correggiamo.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Farō</strong> · strumenti che guidano senza giudicare.</p>
+</footer>
+
+<script>
+const REPO = "faro-edu/faro-reader";
+document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = "https://github.com/" + REPO + "/" + a.dataset.repoPath; });
+</script>
+</body>
+</html>
