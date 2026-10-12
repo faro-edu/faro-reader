@@ -45,10 +45,12 @@ Tutti con SIL Open Font License 1.1, usati senza modifiche.
 | OpenDyslexic | Abbie Gonzalez | <https://github.com/antijingoist/opendyslexic> |
 | Literata | The Literata Project Authors | <https://github.com/googlefonts/literata> |
 
-## Libro di prova
+## Libri della Biblioteca Farō
 
 *Le avventure di Pinocchio* di Carlo Collodi, illustrato da Enrico Mazzanti: testo di pubblico dominio.
 Il testo è stato preso dall'edizione elettronica dell'associazione [Liber Liber](https://www.liberliber.it), tratta dalla seconda edizione Rizzoli (Milano, 1949). Impaginazione e copertina sono nostre.
+
+Lo stesso vale per tutti i libri della [Biblioteca Farō](https://faro-edu.github.io/faro-reader/biblioteca.html): opere di pubblico dominio, testo preso dalle edizioni elettroniche di Liber Liber, impaginazione e copertine nostre. L'ultima pagina di ogni libro indica l'edizione a stampa da cui è tratto.
 
 ## Strumenti usati solo durante lo sviluppo
 

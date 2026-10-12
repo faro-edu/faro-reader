@@ -1,0 +1,71 @@
+{
+ "versione": 1,
+ "libri": [
+  {
+   "voce": "pinocchio",
+   "titolo": "Le avventure di Pinocchio",
+   "autore": "Carlo Collodi",
+   "fascia": "ragazzi",
+   "sha1": "dc42bd9e5b4092e805c6bafba3eabd48053525f1",
+   "byte": 154172,
+   "minuti": 289,
+   "epub": "libri/pinocchio.epub",
+   "copertina": "copertine/pinocchio.png"
+  },
+  {
+   "voce": "cuore",
+   "titolo": "Cuore",
+   "autore": "Edmondo De Amicis",
+   "fascia": "ragazzi",
+   "sha1": "9395b43600f836fdc08be21ab69a3a8805579db9",
+   "byte": 304016,
+   "minuti": 579,
+   "epub": "libri/cuore.epub",
+   "copertina": "copertine/cuore.png"
+  },
+  {
+   "voce": "tigri-di-mompracem",
+   "titolo": "Le tigri di Mompracem",
+   "autore": "Emilio Salgari",
+   "fascia": "ragazzi",
+   "sha1": "3dfd39bdb4f2170290aeaea515547f9a52ed8c4e",
+   "byte": 308554,
+   "minuti": 644,
+   "epub": "libri/tigri-di-mompracem.epub",
+   "copertina": "copertine/tigri-di-mompracem.png"
+  },
+  {
+   "voce": "jungla-nera",
+   "titolo": "I misteri della jungla nera",
+   "autore": "Emilio Salgari",
+   "fascia": "ragazzi",
+   "sha1": "fe501ba25c8ec574847d533765015e9e2f6c6e73",
+   "byte": 334369,
+   "minuti": 671,
+   "epub": "libri/jungla-nera.epub",
+   "copertina": "copertine/jungla-nera.png"
+  },
+  {
+   "voce": "cera-una-volta",
+   "titolo": "C'era una volta... Fiabe",
+   "autore": "Luigi Capuana",
+   "fascia": "ragazzi",
+   "sha1": "9e587a79f86e7e6c19966402d564d854a65426d4",
+   "byte": 141351,
+   "minuti": 228,
+   "epub": "libri/cera-una-volta.epub",
+   "copertina": "copertine/cera-una-volta.png"
+  },
+  {
+   "voce": "raccontafiabe",
+   "titolo": "Il raccontafiabe",
+   "autore": "Luigi Capuana",
+   "fascia": "ragazzi",
+   "sha1": "3b6784a52dc36c48c7d893a7351fc8ad1c7c3297",
+   "byte": 150412,
+   "minuti": 266,
+   "epub": "libri/raccontafiabe.epub",
+   "copertina": "copertine/raccontafiabe.png"
+  }
+ ]
+}
