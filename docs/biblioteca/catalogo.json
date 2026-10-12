@@ -6,8 +6,8 @@
    "titolo": "Le avventure di Pinocchio",
    "autore": "Carlo Collodi",
    "fascia": "ragazzi",
-   "sha1": "dc42bd9e5b4092e805c6bafba3eabd48053525f1",
-   "byte": 154172,
+   "sha1": "bd58b474f2a2d87e42449950c008b87bd9e13633",
+   "byte": 197611,
    "minuti": 289,
    "epub": "libri/pinocchio.epub",
    "copertina": "copertine/pinocchio.png"
@@ -47,11 +47,11 @@
   },
   {
    "voce": "cera-una-volta",
-   "titolo": "C'era una volta... Fiabe",
+   "titolo": "C'era una volta...",
    "autore": "Luigi Capuana",
    "fascia": "ragazzi",
-   "sha1": "9e587a79f86e7e6c19966402d564d854a65426d4",
-   "byte": 141351,
+   "sha1": "351f3ed48d564c8f2df1addf2f74832edcc6f740",
+   "byte": 141337,
    "minuti": 228,
    "epub": "libri/cera-una-volta.epub",
    "copertina": "copertine/cera-una-volta.png"
