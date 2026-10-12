@@ -24,7 +24,6 @@ Kyutai chiede che i suoi modelli non siano usati per imitare o clonare una voce 
 |---|---|---|---|
 | UDPipe 1, codice | Istituto di linguistica formale e applicata, Università Carolina di Praga | MPL 2.0 | <https://github.com/ufal/udpipe> |
 | UDPipe, modello italiano ISDT | come sopra, da Universal Dependencies | CC BY-NC-SA 4.0 | <https://ufal.mff.cuni.cz/udpipe/1/models> |
-| Numeri in lettere | adattamento in Kotlin di `num2words` (Savoir-faire Linux e collaboratori) | LGPL 2.1 | <https://github.com/savoirfairelinux/num2words> |
 | Dizionario degli accenti | costruito da noi a partire da WikiPron (dati di Wikizionario) e da un elenco di frequenza delle parole | dati di Wikizionario: CC BY-SA 4.0 | <https://github.com/CUNY-CL/wikipron> · <https://github.com/hermitdave/FrequencyWords> |
 
 Il modello italiano di UDPipe è distribuito solo per uso non commerciale: Farō Reader lo usa così com'è, senza modifiche.
@@ -56,4 +55,4 @@ L'edizione elettronica è dell'associazione [Liber Liber](https://www.liberliber
 ## Strumenti usati solo durante lo sviluppo
 
 Non sono dentro l'app: sono serviti a costruire e controllare il dizionario e le voci.
-eSpeak NG (GPL 3.0), Praat, Whisper.
+eSpeak NG (GPL 3.0), num2words (LGPL 2.1), Praat, Whisper.
