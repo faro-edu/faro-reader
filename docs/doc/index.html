@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentazione · Farō Reader</title>
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.svg" alt="" width="36" height="36"> Farō Reader</a>
+  <nav aria-label="Documentazione">
+    <a href="./">Documentazione</a>
+    <a href="manuale.html">Manuale</a>
+    <a href="wcag.html">WCAG</a>
+    <a href="caa.html">CAA</a>
+  </nav>
+</header>
+
+<main>
+<section class="doc">
+  <p class="eyebrow">Farō Reader</p>
+<h1 id="documentazione">Documentazione</h1>
+<p>Tutto quello che c'è da sapere su Farō Reader, in un posto solo. Versione dell'app descritta: <strong>0.4</strong>.</p>
+<h2 id="usare-lapp">Usare l'app</h2>
+<ul>
+<li><a href="manuale.html">Manuale</a>: come si usa Farō Reader, schermata per schermata, con le immagini.</li>
+<li><a href="../completa.html">Versione completa</a>: cosa aggiunge +Plus e come si chiede la licenza.</li>
+<li><a href="../biblioteca.html">Biblioteca Farō</a>: i libri pronti da scaricare dentro l'app.</li>
+</ul>
+<h2 id="accessibilita">Accessibilità</h2>
+<ul>
+<li><a href="wcag.html">WCAG 2.2</a>: relazione criterio per criterio sulle regole internazionali di accessibilità.</li>
+<li><a href="caa.html">CAA</a>: relazione sulla nostra lista di controllo per la comunicazione aumentativa.</li>
+</ul>
+<h2 id="dietro-le-quinte">Dietro le quinte</h2>
+<ul>
+<li><a href="../decisioni.html">Le decisioni dietro la pubblicazione</a>: licenze, voci, dati.</li>
+<li><a data-repo-path="blob/main/LICENZE.md" href="../#licenze">Crediti e licenze</a>: autori e fonti di ogni parte.</li>
+<li><a data-repo-path="blob/main/voci/GUIDA.md" href="../#laboratorio">Guida per farsi la propria voce</a>.</li>
+</ul>
+<h2 id="qualcosa-non-va">Qualcosa non va?</h2>
+<p><a data-repo-path="issues/new?template=app.yml" href="../#segnala">Scrivicelo</a>. Dall'app: Impostazioni, scheda Segnala un problema.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Farō</strong> · strumenti che guidano senza giudicare.</p>
+</footer>
+<script>
+const REPO = "faro-edu/faro-reader";
+document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = "https://github.com/" + REPO + "/" + a.dataset.repoPath; });
+</script>
+</body>
+</html>

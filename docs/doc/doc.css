@@ -1,0 +1,23 @@
+/* Area Documentazione: testo lungo, tabelle, immagini dell'app */
+.doc { gap: 18px; }
+.doc > h1 { margin-bottom: 8px; }
+.doc h2 { margin-top: 28px; }
+.doc h3 { margin-top: 12px; }
+.doc p, .doc li { max-width: 68ch; line-height: 1.6; }
+.doc ul, .doc ol { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 6px; }
+.doc img { max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); }
+.doc figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.doc .shots { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.doc .shots img { max-height: 520px; width: auto; }
+.tw { overflow-x: auto; max-width: 100%; }
+.doc table { border-collapse: collapse; width: 100%; font-size: .98rem; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.doc th { background: var(--band); }
+.doc td:first-child { white-space: nowrap; font-weight: 700; }
+.doc code { font-size: .92em; background: var(--band); padding: 1px 5px; border-radius: 5px; }
+.doc .esito-c { color: var(--accent); font-weight: 700; }
+.doc blockquote { margin: 0; padding-left: 18px; border-left: 4px solid var(--lanterna); color: var(--muted); }
+.top nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+.doc .simboli { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 12px; }
+.doc .simboli li { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); text-align: center; font-size: .9rem; font-weight: 700; }
+.doc .simboli svg { width: 40px; height: 40px; color: var(--fg); }

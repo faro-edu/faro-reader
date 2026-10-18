@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibilità: WCAG 2.2 · Farō Reader</title>
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.svg" alt="" width="36" height="36"> Farō Reader</a>
+  <nav aria-label="Documentazione">
+    <a href="./">Documentazione</a>
+    <a href="manuale.html">Manuale</a>
+    <a href="wcag.html" aria-current="page">WCAG</a>
+    <a href="caa.html">CAA</a>
+  </nav>
+</header>
+
+<main>
+<section class="doc">
+  <p class="eyebrow">Documentazione</p>
+<h1 id="accessibilita-wcag-22">Accessibilità: WCAG 2.2</h1>
+<p>Relazione di <strong>autovalutazione</strong> di Farō Reader <strong>0.4</strong> per Android, criterio per criterio.
+Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e app. Per un'app le applichiamo come chiede la norma europea <strong>EN 301 549</strong> (capitolo 11, software).</p>
+<h2 id="in-breve">In breve</h2>
+<ul>
+<li><strong>Livello cercato</strong>: WCAG 2.2 <strong>AA</strong>, più sei criteri AAA utili a chi è dislessico.</li>
+<li><strong>Esito</strong>: su 55 criteri A e AA, <strong>43 conformi</strong>, 2 parzialmente conformi (1.4.10, 4.1.2), 2 non ancora verificati (1.3.2, 1.4.4), 8 non applicabili, <strong>nessuno non conforme</strong>. Per dichiarare il livello AA per intero mancano la prova completa con TalkBack e quella con il carattere al 200%.</li>
+<li><strong>Data</strong>: 18 ottobre 2026. <strong>Versione valutata</strong>: 0.4 (versione di prova del 18 ottobre 2026).</li>
+<li><strong>Chi l'ha fatta</strong>: il team di Farō, da solo. Non è una certificazione e nessun ente esterno l'ha controllata.</li>
+</ul>
+<h2 id="come-labbiamo-controllato">Come l'abbiamo controllato</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Prova</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G</strong></td>
+<td><strong>Giro automatico</strong> su ogni schermata e ogni finestra, nei due orientamenti, su telefono e tablet. Uno strumento nostro legge dall'interno dell'app ogni elemento: simbolo, parola, nome per TalkBack, area di tocco, colori veri, scritte tagliate. Poi tocca ogni altoparlante e controlla che la voce parta e si fermi.</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td><strong>Foto</strong> di tutte le schermate: telefono e tablet, in verticale e in orizzontale (104 foto).</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>Lettura del codice</strong> dell'app.</td>
+</tr>
+<tr>
+<td><strong>CON</strong></td>
+<td><strong>Contrasti</strong> calcolati su tutti i colori dell'app e dei tre temi di lettura.</td>
+</tr>
+<tr>
+<td><strong>NV</strong></td>
+<td><strong>Non verificato</strong>: serve una prova a mano che non abbiamo ancora fatto. Lo diciamo invece di indovinare.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dispositivi: tablet OPPO OPD2202 (Android 16, schermo 2000×2800) e telefono OPPO CPH1907 (Android 11, 360 dp di larghezza).</p>
+<p>Esiti: <strong>C</strong> conforme · <strong>P</strong> parzialmente conforme · <strong>N</strong> non conforme · <strong>NA</strong> non applicabile · <strong>NV</strong> non verificato.</p>
+<h2 id="percepibile">Percepibile</h2>
+<p>Le informazioni si devono poter vedere, sentire o leggere in più di un modo.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.1 Contenuti non testuali (A)</td>
+<td>C (G)</td>
+<td>Ogni comando ha un nome che TalkBack legge, e il nome comincia con la parola scritta. Le immagini solo decorative (la copertina, il faro) sono nascoste a TalkBack.</td>
+</tr>
+<tr>
+<td>1.2.1–1.2.5 Audio e video (A, AA)</td>
+<td>NA</td>
+<td>L'app non contiene audio o video registrati: la voce legge il testo che è sullo schermo.</td>
+</tr>
+<tr>
+<td>1.3.1 Informazioni e correlazioni (A)</td>
+<td>C (C, G)</td>
+<td>I titoli di pagina, di sezione e delle schede sono intestazioni per TalkBack. Le scelte sono gruppi con il loro titolo: "Quando premo Play, elenco, 3 elementi"; ogni scelta dice la sua posizione e se è scelta.</td>
+</tr>
+<tr>
+<td>1.3.2 Sequenza significativa (A)</td>
+<td>NV</td>
+<td>L'ordine nel codice segue quello che si vede: pulsanti, titolo, altoparlante; poi il contenuto. Va confermato con TalkBack.</td>
+</tr>
+<tr>
+<td>1.3.3 Caratteristiche sensoriali (A)</td>
+<td>C (C)</td>
+<td>Le istruzioni dicono il nome della cosa ("l'altoparlante accanto a un titolo"), non solo la forma o il posto.</td>
+</tr>
+<tr>
+<td>1.3.4 Orientamento (AA)</td>
+<td>C (F)</td>
+<td>Ogni schermata funziona in verticale e in orizzontale. In orizzontale il lettore sposta i comandi in una colonna, l'audiolibro mette la copertina a sinistra. Chi vuole può bloccare la rotazione dal pannello Testo.</td>
+</tr>
+<tr>
+<td>1.3.5 Scopo degli input (AA)</td>
+<td>C (C)</td>
+<td>L'unico campo con dati personali è il nome: dichiara che è un nome, così la tastiera può proporlo.</td>
+</tr>
+<tr>
+<td>1.4.1 Uso del colore (A)</td>
+<td>C (F)</td>
+<td>La scelta ha il cerchietto con la spunta, non solo il colore. La parola in lettura è gialla <strong>e</strong> sottolineata. I messaggi hanno icona e parola.</td>
+</tr>
+<tr>
+<td>1.4.2 Controllo dell'audio (A)</td>
+<td>C (C)</td>
+<td>La voce parte solo quando la chiedi e si ferma con Pausa o ritoccando l'altoparlante. Il saluto all'apertura dura meno di 3 secondi e si spegne dalle Impostazioni.</td>
+</tr>
+<tr>
+<td>1.4.3 Contrasto minimo (AA)</td>
+<td>C (G, CON)</td>
+<td>Il giro misura i colori veri di ogni scritta: nessuna sotto 4,5:1 (3:1 per le scritte grandi), in tutti e tre i temi.</td>
+</tr>
+<tr>
+<td>1.4.4 Ridimensionamento del testo (AA)</td>
+<td>NV</td>
+<td>Il testo del libro va da 14 a 28 sp con la barra del pannello Testo. Il carattere di sistema al 200% non l'abbiamo ancora provato sull'interfaccia.</td>
+</tr>
+<tr>
+<td>1.4.5 Immagini di testo (AA)</td>
+<td>C (C)</td>
+<td>Non ci sono immagini di testo. I bollini delle Impostazioni hanno la scritta vera accanto al disegno.</td>
+</tr>
+<tr>
+<td>1.4.10 Ricomposizione (AA)</td>
+<td>P (F, G)</td>
+<td>Sul telefono a 360 dp nessuna schermata scorre di lato e i titoli vanno a capo. Manca la prova con il carattere al 200%.</td>
+</tr>
+<tr>
+<td>1.4.11 Contrasto non testuale (AA)</td>
+<td>C (CON)</td>
+<td>La parola in lettura ha una sottolineatura scura (Notte, o Nebbia sul tema scuro) che supera 3:1 sulla pagina. Il bordo delle tessere supera 3:1 sullo sfondo.</td>
+</tr>
+<tr>
+<td>1.4.12 Spaziatura del testo (AA)</td>
+<td>C (C, G)</td>
+<td>Nel lettore interlinea e spazio tra le lettere si scelgono su quattro livelli. Il giro controlla che nessuna scritta dell'interfaccia sia tagliata.</td>
+</tr>
+<tr>
+<td>1.4.13 Contenuto al passaggio o al fuoco (AA)</td>
+<td>C (C, F)</td>
+<td>Il fumetto con le sillabe resta finché serve e si chiude con la ✕, toccando fuori o con Leggi.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="shots"><img loading="lazy" width="420" height="858" src="img/lettura.webp" alt="Lettore: la parola in lettura è gialla e sottolineata, ogni comando ha simbolo e parola"><img loading="lazy" width="420" height="858" src="img/aiuti.webp" alt="Pannello Aiuti: la scelta ha il cerchietto con la spunta, non solo il colore"></div>
+
+<p><em>A sinistra: la parola in lettura è gialla e sottolineata (1.4.1, 1.4.11); ogni comando ha simbolo e parola (1.1.1). A destra: le scelte hanno la spunta (1.4.1) e ogni sezione ha il suo titolo e il suo altoparlante (1.3.1).</em></p>
+<h2 id="utilizzabile">Utilizzabile</h2>
+<p>Ogni comando si deve poter usare, senza fretta e senza gesti difficili.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1.1 Tastiera (A)</td>
+<td>C (prova a mano)</td>
+<td>Con una tastiera collegata al tablet, Tab e le frecce raggiungono ogni comando: barra del titolo, altoparlanti, copertine, capitoli, comandi di lettura. Invio li attiva.</td>
+</tr>
+<tr>
+<td>2.1.2 Nessuna trappola per la tastiera (A)</td>
+<td>C (prova a mano)</td>
+<td>Esc fa come Indietro: chiude la finestra o il pannello aperto, poi torna alla pagina prima. Tab continua sempre e ricomincia dall'inizio.</td>
+</tr>
+<tr>
+<td>2.1.4 Scorciatoie da tastiera (A)</td>
+<td>C (C)</td>
+<td>Non ci sono scorciatoie fatte di un solo carattere.</td>
+</tr>
+<tr>
+<td>2.2.1 Regolazione dei tempi (A)</td>
+<td>C (C)</td>
+<td>Le proposte e gli errori restano finché rispondi. Spariscono da soli solo gli avvisi che non chiedono niente, e quello che dicono resta scritto nella pagina.</td>
+</tr>
+<tr>
+<td>2.2.2 Pausa, stop, nascondi (A)</td>
+<td>C (C)</td>
+<td>Il faro del benvenuto dura meno di 5 secondi. L'anello dell'altoparlante gira solo mentre la voce legge e si ferma ritoccandolo.</td>
+</tr>
+<tr>
+<td>2.3.1 Tre lampeggiamenti (A)</td>
+<td>C (C)</td>
+<td>Niente lampeggia.</td>
+</tr>
+<tr>
+<td>2.4.1 Salto di blocchi (A)</td>
+<td>NA</td>
+<td>Per la EN 301 549 non vale per le app. Ogni sezione ha comunque il suo titolo.</td>
+</tr>
+<tr>
+<td>2.4.2 Titolo della pagina (A)</td>
+<td>C (C, F)</td>
+<td>Ogni schermata ha il suo titolo nella stessa barra in alto. Nel lettore e nell'audiolibro il titolo è quello del libro.</td>
+</tr>
+<tr>
+<td>2.4.3 Ordine del fuoco (A)</td>
+<td>C (prova a mano)</td>
+<td>Il fuoco segue l'ordine che si vede: Indietro, Ascolta, Aiuti, Testo, altoparlante, poi i comandi di lettura dall'alto in basso.</td>
+</tr>
+<tr>
+<td>2.4.4 Scopo del collegamento (A)</td>
+<td>C (G)</td>
+<td>Ogni pulsante dice con una parola cosa fa.</td>
+</tr>
+<tr>
+<td>2.4.5 Più modi (AA)</td>
+<td>C (C)</td>
+<td>Ai capitoli si arriva dall'indice, dalla scheda del libro, con frase prima e frase dopo, e dall'audiolibro.</td>
+</tr>
+<tr>
+<td>2.4.6 Intestazioni ed etichette (AA)</td>
+<td>C (F)</td>
+<td>Titoli e scritte dicono cosa c'è sotto.</td>
+</tr>
+<tr>
+<td>2.4.7 Fuoco visibile (AA)</td>
+<td>C (prova a mano, F)</td>
+<td>Il comando con il fuoco ha un contorno giallo (Lanterna) di 3 dp; anche le copertine e le righe dei capitoli.</td>
+</tr>
+<tr>
+<td>2.4.11 Fuoco non nascosto (AA)</td>
+<td>C (prova a mano)</td>
+<td>Il comando con il fuoco resta visibile: le liste scorrono per mostrarlo e i pannelli non coprono la barra dei comandi.</td>
+</tr>
+<tr>
+<td>2.5.1 Gesti con il puntatore (A)</td>
+<td>C (C)</td>
+<td>Il pizzico per ingrandire ha la barra della dimensione; lo scorrimento ha frase prima, frase dopo e capitoli.</td>
+</tr>
+<tr>
+<td>2.5.2 Annullamento del puntatore (A)</td>
+<td>C (C)</td>
+<td>Le azioni partono quando sollevi il dito: se lo trascini via, non succede niente.</td>
+</tr>
+<tr>
+<td>2.5.3 Etichetta nel nome (A)</td>
+<td>C (G)</td>
+<td>Il giro controlla che il nome letto da TalkBack contenga sempre la parola scritta: "Leggi, riprendi la lettura", "Indietro, torna alla libreria".</td>
+</tr>
+<tr>
+<td>2.5.4 Azionamento da movimento (A)</td>
+<td>NA</td>
+<td>Nessuna funzione si attiva scuotendo o inclinando il dispositivo.</td>
+</tr>
+<tr>
+<td>2.5.7 Movimenti di trascinamento (AA)</td>
+<td>C (C)</td>
+<td>La barra della dimensione risponde anche a un tocco in un punto. La velocità è un gruppo di scelte.</td>
+</tr>
+<tr>
+<td>2.5.8 Dimensione del bersaglio (AA)</td>
+<td>C (G)</td>
+<td>Il giro misura ogni comando: tutti almeno 48 × 48 dp.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="shots"><img loading="lazy" width="900" height="418" src="img/lettura_orizzontale.webp" alt="Lettore sul telefono in orizzontale: barra del titolo con il nome del libro, comandi in un riquadro a destra"></div>
+
+<p><em>La stessa barra del titolo in ogni pagina, con il nome del libro nel lettore (2.4.2); in orizzontale tutto resta usabile (1.3.4); ogni comando è almeno 48 dp (2.5.8).</em></p>
+<h2 id="comprensibile">Comprensibile</h2>
+<p>Le scritte si devono capire e l'app si deve comportare come ci si aspetta.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1.1 Lingua della pagina (A)</td>
+<td>C (C)</td>
+<td>L'app dichiara l'italiano.</td>
+</tr>
+<tr>
+<td>3.1.2 Lingua delle parti (AA)</td>
+<td>NA</td>
+<td>Dipende dalla lingua scritta nel file EPUB del libro.</td>
+</tr>
+<tr>
+<td>3.2.1 Al fuoco (A)</td>
+<td>C (C)</td>
+<td>Spostare il fuoco non cambia schermata.</td>
+</tr>
+<tr>
+<td>3.2.2 All'input (A)</td>
+<td>C (C)</td>
+<td>Scegliere un'opzione non apre altro. La scelta della voce chiude la sua finestra, come ci si aspetta.</td>
+</tr>
+<tr>
+<td>3.2.3 Navigazione coerente (AA)</td>
+<td>C (F)</td>
+<td>La stessa barra del titolo in tutte le pagine; i comandi di lettura sempre nello stesso posto.</td>
+</tr>
+<tr>
+<td>3.2.4 Identificazione coerente (AA)</td>
+<td>C (C)</td>
+<td>Un simbolo ha un solo significato in tutta l'app (vedi la relazione <a href="caa.html">CAA</a>, criterio B3).</td>
+</tr>
+<tr>
+<td>3.2.6 Aiuto coerente (A)</td>
+<td>C (F)</td>
+<td>"Segnala un problema" è sempre nelle Impostazioni; l'altoparlante è in ogni pagina, sezione e finestra.</td>
+</tr>
+<tr>
+<td>3.3.1 Identificazione degli errori (A)</td>
+<td>C (F)</td>
+<td>Gli errori sono scritti, con icona e bordo. Un codice di licenza sbagliato è spiegato a parole.</td>
+</tr>
+<tr>
+<td>3.3.2 Etichette o istruzioni (A)</td>
+<td>C (F)</td>
+<td>I campi hanno un'etichetta e una frase che spiega.</td>
+</tr>
+<tr>
+<td>3.3.3 Suggerimenti per gli errori (AA)</td>
+<td>C (C)</td>
+<td>Ogni errore dice cosa fare.</td>
+</tr>
+<tr>
+<td>3.3.4 Prevenzione degli errori (AA)</td>
+<td>C (C)</td>
+<td>Prima di togliere un libro o cancellare l'audio l'app chiede conferma.</td>
+</tr>
+<tr>
+<td>3.3.7 Inserimento ridondante (A)</td>
+<td>C (C)</td>
+<td>Il nome si chiede una volta sola.</td>
+</tr>
+<tr>
+<td>3.3.8 Autenticazione accessibile (AA)</td>
+<td>C (C)</td>
+<td>Non ci sono password. Il codice della licenza si incolla.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="robusto">Robusto</h2>
+<p>L'app deve funzionare con le tecnologie assistive, come TalkBack.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1.2 Nome, ruolo, valore (A)</td>
+<td>P (C, G)</td>
+<td>Ogni tessera dice cos'è (pulsante, scelta, casella) e se è scelta. Manca la prova completa con TalkBack.</td>
+</tr>
+<tr>
+<td>4.1.3 Messaggi di stato (AA)</td>
+<td>C (C)</td>
+<td>Avvisi e proposte vengono annunciati senza spostare il fuoco.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="criteri-aaa-che-abbiamo-scelto">Criteri AAA che abbiamo scelto</h2>
+<p>Non sono richiesti per il livello AA, ma aiutano molto chi è dislessico.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.4.8 Presentazione visiva</td>
+<td>P</td>
+<td>Tre temi, colonna di testo stretta (34 em al massimo), testo allineato a sinistra, interlinea regolabile. Lo spazio tra i paragrafi va ancora misurato.</td>
+</tr>
+<tr>
+<td>2.2.3 Nessun limite di tempo</td>
+<td>P</td>
+<td>Gli avvisi che non chiedono niente spariscono da soli dopo qualche secondo.</td>
+</tr>
+<tr>
+<td>2.2.4 Interruzioni</td>
+<td>C</td>
+<td>Il controllo degli aggiornamenti si spegne; le proposte non fermano la voce.</td>
+</tr>
+<tr>
+<td>2.5.5 Dimensione del bersaglio</td>
+<td>C</td>
+<td>Tutto almeno 48 dp.</td>
+</tr>
+<tr>
+<td>3.1.5 Livello di lettura</td>
+<td>C</td>
+<td>Ogni scritta dell'app è controllata in automatico: frasi di 15 parole al massimo e indice Gulpease di almeno 80 (facile) per i testi lunghi.</td>
+</tr>
+<tr>
+<td>3.3.5 Aiuto</td>
+<td>C</td>
+<td>Un altoparlante in ogni pagina, sezione, pannello e finestra legge quella parte; sotto le scelte c'è una frase che spiega.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="cosa-manca-ancora">Cosa manca ancora</h2>
+<ul>
+<li><strong>Prova con TalkBack</strong> su ogni schermata: ordine di lettura, nomi, ruoli, stati, messaggi (1.3.2, 4.1.2).</li>
+<li><strong>Carattere di sistema al 200%</strong>: nessuna scritta deve essere tagliata (1.4.4, 1.4.10).</li>
+<li><strong>Tastiera sul telefono</strong>: provata sul tablet; il codice è lo stesso, ma la prova sul telefono manca.</li>
+<li><strong>AAA</strong>: spazio tra i paragrafi (1.4.8) e avvisi che restano finché non tocchi altrove (2.2.3).</li>
+</ul>
+<p>Rifacciamo questa valutazione a ogni versione che cambia l'interfaccia. Se trovi un problema, <a data-repo-path="issues/new?template=app.yml" href="../#segnala">scrivicelo</a>.</p>
+<h2 id="i-bollini">I bollini</h2>
+<div class="shots"><img loading="lazy" width="420" height="858" src="img/accessibilita.webp" alt="Scheda Accessibilità nelle Impostazioni dell'app"></div>
+
+<p>I bollini nelle Impostazioni sono nostri e dicono "autovalutazione": non sono un marchio del W3C né una certificazione.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Farō</strong> · strumenti che guidano senza giudicare.</p>
+</footer>
+<script>
+const REPO = "faro-edu/faro-reader";
+document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = "https://github.com/" + REPO + "/" + a.dataset.repoPath; });
+</script>
+</body>
+</html>

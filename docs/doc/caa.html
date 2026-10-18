@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comunicazione aumentativa (CAA) · Farō Reader</title>
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="../"><img src="../icon.svg" alt="" width="36" height="36"> Farō Reader</a>
+  <nav aria-label="Documentazione">
+    <a href="./">Documentazione</a>
+    <a href="manuale.html">Manuale</a>
+    <a href="wcag.html">WCAG</a>
+    <a href="caa.html" aria-current="page">CAA</a>
+  </nav>
+</header>
+
+<main>
+<section class="doc">
+  <p class="eyebrow">Documentazione</p>
+<h1 id="comunicazione-aumentativa-caa">Comunicazione aumentativa (CAA)</h1>
+<p>Relazione di <strong>autovalutazione</strong> di Farō Reader <strong>0.4</strong> per Android sulla comunicazione aumentativa e alternativa.</p>
+<p>Per le app non esiste una norma CAA da certificare. Per questo abbiamo scritto una <strong>lista di controllo nostra</strong>: ogni criterio si può verificare, e diciamo come l'abbiamo fatto. La lista ha tre livelli:</p>
+<ul>
+<li><strong>Base</strong>: il minimo perché l'app si possa usare guardando i simboli.</li>
+<li><strong>Intermedio</strong>: la voce e i messaggi aiutano davvero.</li>
+<li><strong>Completo</strong>: vocabolario controllato e prova con le persone.</li>
+</ul>
+<p>Un livello è raggiunto quando tutti i suoi criteri, e quelli dei livelli sotto, sono conformi o non applicabili.</p>
+<h2 id="in-breve">In breve</h2>
+<ul>
+<li><strong>Obiettivo della 0.4</strong>: livello <strong>Intermedio</strong>. Obiettivo della 1.0: livello Completo.</li>
+<li><strong>Esito</strong>: <strong>livello Intermedio raggiunto</strong>: 18 criteri su 18 conformi (Base e Intermedio). Del livello Completo è conforme 1 criterio su 5.</li>
+<li><strong>Data</strong>: 18 ottobre 2026. <strong>Versione valutata</strong>: 0.4 (versione di prova del 18 ottobre 2026).</li>
+<li>Prove usate: le stesse della <a href="wcag.html">relazione WCAG</a> (giro automatico <strong>G</strong>, foto <strong>F</strong>, codice <strong>C</strong>).</li>
+</ul>
+<h2 id="base">Base</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B1</strong> Ogni azione ha un simbolo e una parola</td>
+<td>C (G, F)</td>
+<td>Il giro controlla ogni comando di ogni schermata, nei due orientamenti, su telefono e tablet: nessuno è senza simbolo o senza parola. Chi conosce bene l'app può scegliere "solo simbolo" nel pannello Testo; il predefinito è simbolo e parola. Le righe dell'indice sono un elenco di capitoli, non comandi.</td>
+</tr>
+<tr>
+<td><strong>B2</strong> Posizione fissa</td>
+<td>C (F)</td>
+<td>La barra del titolo è uguale in tutte le pagine: pulsanti a sinistra, titolo, altoparlante a destra. I comandi di lettura sono sempre in basso; in orizzontale in una colonna, a destra o a sinistra come scegli.</td>
+</tr>
+<tr>
+<td><strong>B3</strong> Stesso segno = stessa azione</td>
+<td>C (C)</td>
+<td>Un simbolo, un significato, in tutta l'app. Nella 0.3 l'altoparlante voleva dire tre cose diverse: ora è solo "leggi questa parte"; la voce ha la testa che parla, la lettura il libro aperto, il codice della licenza la chiave, la ricerca degli aggiornamenti la freccia circolare.</td>
+</tr>
+<tr>
+<td><strong>B4</strong> Una sola azione principale</td>
+<td>C (F)</td>
+<td>In ogni schermata solo un pulsante è giallo: Leggi (o Pausa), oppure Riprendi in libreria.</td>
+</tr>
+<tr>
+<td><strong>B5</strong> Lo stato si vede nel comando</td>
+<td>C (F)</td>
+<td>Leggi diventa Pausa, con simbolo e parola. La scelta ha il cerchietto con la spunta. L'altoparlante che legge mostra la pausa e un anello che gira.</td>
+</tr>
+<tr>
+<td><strong>B6</strong> Il colore non è l'unico segnale</td>
+<td>C (F)</td>
+<td>Guardando le foto in bianco e nero si distinguono scelte, stato e messaggi.</td>
+</tr>
+<tr>
+<td><strong>B7</strong> Tempo illimitato per rispondere</td>
+<td>C (C)</td>
+<td>Proposte e domande restano sullo schermo finché rispondi.</td>
+</tr>
+<tr>
+<td><strong>B8</strong> Si può sempre tornare indietro</td>
+<td>C (C)</td>
+<td>Ogni finestra ha Annulla o Chiudi. Togliere un libro o cancellare l'audio chiede conferma.</td>
+</tr>
+<tr>
+<td><strong>B9</strong> Risposta a ogni tocco</td>
+<td>C (C)</td>
+<td>Tessere, pulsanti e altoparlanti cambiano fondo e bordo mentre li tocchi; con la tastiera hanno un contorno giallo.</td>
+</tr>
+<tr>
+<td><strong>B10</strong> Aree di tocco di almeno 48 dp</td>
+<td>C (G)</td>
+<td>Il giro misura ogni comando.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="shots"><img loading="lazy" width="420" height="858" src="img/aiuti.webp" alt="Pannello Aiuti: tessere con simbolo e parola, la scelta con la spunta, altoparlante per ogni sezione"><img loading="lazy" width="420" height="858" src="img/audiolibro.webp" alt="Audiolibro: un solo pulsante giallo, Leggi; gli altri comandi con simbolo e parola"></div>
+
+<p><em>Ogni comando ha simbolo e parola (B1); la scelta ha la spunta (B5, B6); un solo pulsante giallo per schermata (B4).</em></p>
+<h2 id="intermedio">Intermedio</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I1</strong> Nessuna azione solo a gesti</td>
+<td>C (C)</td>
+<td>Il pizzico ha la barra della dimensione, lo scorrimento ha frase prima, frase dopo e capitoli, il tocco sulla parola ha il pannello Aiuti.</td>
+</tr>
+<tr>
+<td><strong>I2</strong> Ogni comando si può spiegare</td>
+<td>C (G)</td>
+<td>L'altoparlante in ogni pagina, sezione, pannello e finestra legge, uno dopo l'altro, titolo, testi e pulsanti di quella parte. Mentre legge, ogni elemento si illumina di giallo. Il giro tocca ogni altoparlante e controlla che la voce parta e si fermi.</td>
+</tr>
+<tr>
+<td><strong>I3</strong> Messaggi ascoltabili</td>
+<td>C (C)</td>
+<td>Proposte ed errori hanno il loro altoparlante. Gli avvisi che spariscono da soli ripetono quello che è già scritto nella pagina.</td>
+</tr>
+<tr>
+<td><strong>I4</strong> Tre tipi di messaggio distinti</td>
+<td>C (C)</td>
+<td>Avviso, proposta ed errore hanno ciascuno la sua icona e la sua forma, non solo il colore.</td>
+</tr>
+<tr>
+<td><strong>I5</strong> Proposte con pulsanti veri</td>
+<td>C (F)</td>
+<td>Ogni proposta ha pulsanti a tessera con simbolo e parola; niente azioni nascoste nel testo.</td>
+</tr>
+<tr>
+<td><strong>I6</strong> Frasi corte e parole comuni</td>
+<td>C (C)</td>
+<td>Tutte le scritte dell'app sono controllate in automatico a ogni modifica: frasi di 15 parole al massimo e indice Gulpease di almeno 80 per i testi lunghi.</td>
+</tr>
+<tr>
+<td><strong>I7</strong> Gli errori dicono cosa fare</td>
+<td>C (C)</td>
+<td>"Per vedere la Biblioteca serve internet", non un codice d'errore.</td>
+</tr>
+<tr>
+<td><strong>I8</strong> Testi e bollini leggibili dalla voce</td>
+<td>C (G)</td>
+<td>Anche le schede delle Impostazioni e i bollini hanno l'altoparlante.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="shots"><img loading="lazy" width="800" height="252" src="img/fumetto.webp" alt="Fumetto con la parola divisa in sillabe"></div>
+
+<p><em>Il fumetto con le sillabe: la parola toccata compare grande, divisa in sillabe, e la voce la legge una sillaba alla volta.</em></p>
+<h2 id="completo-per-la-10">Completo (per la 1.0)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Esito</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C1</strong> Solo simboli Farō</td>
+<td>C (C)</td>
+<td>58 simboli disegnati da noi, nello stile dei pittogrammi CAA: tratto spesso, forme piene, pochi dettagli. Nessuna icona di sistema resta nell'app, nemmeno nella notifica.</td>
+</tr>
+<tr>
+<td><strong>C2</strong> Vocabolario controllato</td>
+<td>N</td>
+<td>Manca ancora il glossario: una sola parola per ogni cosa, controllata in automatico.</td>
+</tr>
+<tr>
+<td><strong>C3</strong> Prova con le persone</td>
+<td>N</td>
+<td>Non ancora fatta. Vogliamo farla con almeno un ragazzo dislessico e un logopedista.</td>
+</tr>
+<tr>
+<td><strong>C4</strong> Etichette leggibili al 200%</td>
+<td>NV</td>
+<td>Non ancora provato con il carattere di sistema al massimo.</td>
+</tr>
+<tr>
+<td><strong>C5</strong> Simboli riconoscibili senza leggere</td>
+<td>NV</td>
+<td>Si misura durante la prova con le persone.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="i-simboli">I simboli</h2>
+<p>Tutti i simboli dell'app, ciascuno con la sua parola:</p>
+<ul class="simboli"><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" fill="currentColor"/>
+  <path d="M2.5 15.5a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" fill="currentColor"/>
+  <path d="M13.5 15.5a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 20.5h10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.5 18l2.5 2.5-2.5 2.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>A turno</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M12 4.5v15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.5 12h15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Aggiungi</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M20.5 12a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.5 12a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 6l3.5 3.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 18l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 18l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Aiuti</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/>
+  <path d="M15.5 9a4.5 4.5 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Ascolta</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M6 3.5h12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 20.5h12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7.5 3.5c0 5 9 5 9 8.5s-9 3.5-9 8.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.5 3.5c0 5-9 5-9 8.5s9 3.5 9 8.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.2 19.5c.4-1.8 5.2-1.8 5.6 0z" fill="currentColor"/>
+</svg><span>Attesa</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M4 15v-2.5a8 8 0 0 1 16 0V15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 15.5a2 2 0 0 1 2-2h1.5a1 1 0 0 1 1 1v5.5a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2z" fill="currentColor"/>
+  <path d="M21 15.5a2 2 0 0 0-2-2h-1.5a1 1 0 0 0-1 1v5.5a1 1 0 0 0 1 1H19a2 2 0 0 0 2-2z" fill="currentColor"/>
+</svg><span>Audiolibro</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M19 12a7 7 0 1 1-2.1-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.5 2.5v4.5H13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Avanti di 30 secondi</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M10.3 4.2L2.6 18a2 2 0 0 0 1.75 3h15.3a2 2 0 0 0 1.75-3L13.7 4.2a1.95 1.95 0 0 0-3.4 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 9.5v4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.4 17.4a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z" fill="currentColor"/>
+</svg><span>Avviso</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 6.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 6.5V4h6v2.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 6.5l1 13.5h10l1-13.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 10.5v6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 10.5v6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Cancella</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 4.5h4v4H3z" fill="currentColor"/>
+  <path d="M10.5 6.5H21" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 10h4v4H3z" fill="currentColor"/>
+  <path d="M10.5 12H21" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 15.5h4v4H3z" fill="currentColor"/>
+  <path d="M10.5 17.5H21" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Capitoli</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.8 3v4.2h-4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Cerca adesso</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.8 3v4.2h-4.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 8v4.3l2.8 1.7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Cerca da solo</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M10.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 12H21.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.5 12v4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 12v3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Codice</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Chiudi</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 4.5h18v15H3z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.5 4.5H21v15h-5.5z" fill="currentColor"/>
+</svg><span>Comandi a destra</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 4.5h18v15H3z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 4.5h5.5v15H3z" fill="currentColor"/>
+</svg><span>Comandi a sinistra</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5 4.5v15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.5 6.2v11.6a1 1 0 0 0 1.52 .85l9.4-5.8a1 1 0 0 0 0-1.7l-9.4-5.8A1 1 0 0 0 9.5 6.2z" fill="currentColor"/>
+</svg><span>Leggi da lì</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M6 3.5h8l4.5 4.5v12.5H6z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 3.5V8h4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 12.5h6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 16.5h6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Documento</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M7 3.5h10v10H7z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5 18h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 21.5h8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Segno e parola</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M9.5 21l1-12h3l1 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 21h8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 5h4v4h-4z" fill="currentColor"/>
+  <path d="M12 2v3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 6l5 1.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20.5 6l-5 1.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Faro</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Fatto</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M18.5 5v14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.5 5.6v12.8a1 1 0 0 0 1.55 .83l8.35-5.4a1 1 0 0 0 0-1.66L6.05 4.77A1 1 0 0 0 4.5 5.6z" fill="currentColor"/>
+</svg><span>Frase dopo</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2.5 9.5h19v5h-19z" fill="currentColor"/>
+  <path d="M3.5 19h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Frase evidenziata</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5.5 5v14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.5 5.6v12.8a1 1 0 0 1-1.55 .83L9.6 12.83a1 1 0 0 1 0-1.66l8.35-5.4a1 1 0 0 1 1.55 .83z" fill="currentColor"/>
+</svg><span>Frase prima</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 5h6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2.5 9.5h19v5h-19z" fill="currentColor"/>
+  <path d="M3.5 19h6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Attenua il resto</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M4 3.5h16a1.6 1.6 0 0 1 1.6 1.6v9.8a1.6 1.6 0 0 1-1.6 1.6h-8l-5 4v-4H4a1.6 1.6 0 0 1-1.6-1.6V5.1A1.6 1.6 0 0 1 4 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.8 8.5h3.4v3.4H5.8z" fill="currentColor"/>
+  <path d="M10.3 8.5h3.4v3.4h-3.4z" fill="currentColor"/>
+  <path d="M14.8 8.5h3.4v3.4h-3.4z" fill="currentColor"/>
+</svg><span>Fumetto con le sillabe</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" fill="currentColor"/>
+  <path d="M12 2.5v2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 19.5v2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2.5 12h2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.5 12h2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.3 5.3l1.4 1.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.3 17.3l1.4 1.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.3 18.7l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.3 6.7l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Giorno</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 6.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 12h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 17.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" fill="currentColor"/>
+  <path d="M18.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" fill="currentColor"/>
+  <path d="M12.5 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" fill="currentColor"/>
+</svg><span>Impostazioni</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M19 12H6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M11.5 5.5L5 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Indietro</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5 12a7 7 0 1 0 2.1-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6.5 2.5v4.5H11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Indietro di 30 secondi</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M7 5.2v13.6a1.2 1.2 0 0 0 1.82 1.03l11.2-6.8a1.2 1.2 0 0 0 0-2.06L8.82 4.17A1.2 1.2 0 0 0 7 5.2z" fill="currentColor"/>
+</svg><span>Leggi</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M15.5 10a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.2 14.2l6.3 6.3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Dettagli</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.8 17.5a8.5 8.5 0 1 1 16.4 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 15.5L7 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 15.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"/>
+</svg><span>Lento</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 6c3-1.6 6-1.6 9 0v13c-3-1.6-6-1.6-9 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 6c-3-1.6-6-1.6-9 0v13c3-1.6 6-1.6 9 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.5 10h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.5 13.5h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.5 10h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.5 13.5h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Lettura</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 9c3-1.4 6-1.4 9 0v11c-3-1.4-6-1.4-9 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 9c-3-1.4-6-1.4-9 0v11c3-1.4 6-1.4 9 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.5 5a5 5 0 0 1 7 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 2.5a8.5 8.5 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Ti leggo io</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5.5 11h13v9.5h-13z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.5 11V7.5a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Rotazione bloccata</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5.5 11h13v9.5h-13z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.5 11V7.5a3.5 3.5 0 0 1 6.8-1.2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Rotazione libera</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 7.5h17v9h-17z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.5 9.5h7v5h-7z" fill="currentColor"/>
+  <path d="M7 20h10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Memoria</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M20.5 12a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Niente</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3 6h13v11H3z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.8 9.5h7.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.8 13h4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.5 19.8l5.6-5.6 1.8 1.8-5.6 5.6h-1.8z" fill="currentColor"/>
+</svg><span>Cambia nome</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor"/>
+</svg><span>Notte</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="currentColor"/>
+</svg><span>Parola</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M6 5.5a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 6 18.5z" fill="currentColor"/>
+  <path d="M13 5.5a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-2a1.5 1.5 0 0 1-1.5-1.5z" fill="currentColor"/>
+</svg><span>Pausa</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M12 3.5v11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.5 20h15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Prepara</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 4.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 12h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 19.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Ampia</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 6h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 18h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Molto ampia</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 10.5h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 16h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Normale</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.5 6h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 10h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 14h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 18h17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Stretta</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M8 3.5h8l3.5 17h-15z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 16.5l4-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.6 16.5a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z" fill="currentColor"/>
+</svg><span>Solo ritmo</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5.5 21V3.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.5 3.5h11.8a.8.8 0 0 1 .64 1.28L15.5 8.5l2.44 3.72a.8.8 0 0 1-.64 1.28H5.5z" fill="currentColor"/>
+</svg><span>Segnala</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M6 3.5h8.5l4 4v13H6z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 3.5v4.5h4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 12.5h6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 16.5h6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Seppia</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M2.5 9.5h5.5v5H2.5z" fill="currentColor"/>
+  <path d="M9.25 9.5h5.5v5h-5.5z" fill="currentColor"/>
+  <path d="M16 9.5h5.5v5H16z" fill="currentColor"/>
+</svg><span>Parola in sillabe</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M2.5 4h5v4h-5z" fill="currentColor"/>
+  <path d="M9.5 4h5v4h-5z" fill="currentColor"/>
+  <path d="M16.5 4h5v4h-5z" fill="currentColor"/>
+  <path d="M2.5 10h5v4h-5z" fill="currentColor"/>
+  <path d="M9.5 10h5v4h-5z" fill="currentColor"/>
+  <path d="M16.5 10h5v4h-5z" fill="currentColor"/>
+  <path d="M2.5 16h5v4h-5z" fill="currentColor"/>
+  <path d="M9.5 16h5v4h-5z" fill="currentColor"/>
+</svg><span>Tutto in sillabe</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M5.5 5.5h13v13h-13z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Solo segno</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M2.5 20L8 4.5 13.5 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.6 14.5h6.8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 12.5v7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 17a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Testo</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M20 13a8 8 0 1 1-16 0 8 8 0 0 1 16 0z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 9v4.5l3 2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.5 2.5h5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Spegnimento</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M3.8 17.5a8.5 8.5 0 1 1 16.4 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 15.5l4.5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 15.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"/>
+</svg><span>Velocità</span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M2.6 20.8v-3.6C1.6 15.8 1 14.1 1 12.2A7.3 7.3 0 0 1 8.3 4.9c3 0 5.4 1.8 6.4 4.4l1.4 3.2h-1.7l-1.8 1.3 1.8 1.2v1.4a1.4 1.4 0 0 1-1.4 1.4h-2.5v3z" fill="currentColor"/>
+  <path d="M17.4 9.6a3.8 3.8 0 0 1 0 4.8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.4 7.7a6.4 6.4 0 0 1 0 8.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21.4 5.8a9 9 0 0 1 0 12.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Voce</span></li></ul>
+
+<h2 id="cosa-manca-ancora">Cosa manca ancora</h2>
+<ul>
+<li><strong>Glossario</strong> delle parole dell'app (C2).</li>
+<li><strong>Prova con le persone</strong> e riconoscimento dei simboli senza parole (C3, C5).</li>
+<li><strong>Carattere al 200%</strong> (C4).</li>
+</ul>
+<p>Se un simbolo non si capisce o una parola è difficile, <a data-repo-path="issues/new?template=app.yml" href="../#segnala">scrivicelo</a>.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Farō</strong> · strumenti che guidano senza giudicare.</p>
+</footer>
+<script>
+const REPO = "faro-edu/faro-reader";
+document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = "https://github.com/" + REPO + "/" + a.dataset.repoPath; });
+</script>
+</body>
+</html>
