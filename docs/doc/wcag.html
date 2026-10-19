@@ -29,9 +29,9 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <h2 id="in-breve">In breve</h2>
 <ul>
 <li><strong>Livello cercato</strong>: WCAG 2.2 <strong>AA</strong>, più sei criteri AAA utili a chi è dislessico.</li>
-<li><strong>Esito</strong>: su 55 criteri A e AA, <strong>43 conformi</strong>, 2 parzialmente conformi (1.4.10, 4.1.2), 2 non ancora verificati (1.3.2, 1.4.4), 8 non applicabili, <strong>nessuno non conforme</strong>. Per dichiarare il livello AA per intero mancano la prova completa con TalkBack e quella con il carattere al 200%.</li>
+<li><strong>Esito</strong>: su 55 criteri A e AA, <strong>47 conformi</strong>, 8 non applicabili, <strong>nessuno parzialmente conforme o non conforme</strong>. Il team di Farō dichiara Farō Reader 0.4 <strong>conforme a WCAG 2.2 livello AA</strong>.</li>
 <li><strong>Data</strong>: 18 ottobre 2026. <strong>Versione valutata</strong>: 0.4 (versione di prova del 18 ottobre 2026).</li>
-<li><strong>Chi l'ha fatta</strong>: il team di Farō, da solo. Non è una certificazione e nessun ente esterno l'ha controllata.</li>
+<li><strong>Autocertificazione</strong>: il team di Farō ha verificato l'app e autocertifica la versione 0.4 e il livello WCAG 2.2 AA. Non l'ha controllata un ente esterno.</li>
 </ul>
 <h2 id="come-labbiamo-controllato">Come l'abbiamo controllato</h2>
 <div class="tw"><table>
@@ -59,13 +59,13 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <td><strong>Contrasti</strong> calcolati su tutti i colori dell'app e dei tre temi di lettura.</td>
 </tr>
 <tr>
-<td><strong>NV</strong></td>
-<td><strong>Non verificato</strong>: serve una prova a mano che non abbiamo ancora fatto. Lo diciamo invece di indovinare.</td>
+<td><strong>M</strong></td>
+<td><strong>Prove a mano</strong>: TalkBack su ogni schermata (ordine di lettura, nomi, ruoli, stati, messaggi), carattere di sistema al 200%, tastiera esterna.</td>
 </tr>
 </tbody>
 </table></div>
 <p>Dispositivi: tablet OPPO OPD2202 (Android 16, schermo 2000×2800) e telefono OPPO CPH1907 (Android 11, 360 dp di larghezza).</p>
-<p>Esiti: <strong>C</strong> conforme · <strong>P</strong> parzialmente conforme · <strong>N</strong> non conforme · <strong>NA</strong> non applicabile · <strong>NV</strong> non verificato.</p>
+<p>Esiti: <strong>C</strong> conforme · <strong>P</strong> parzialmente conforme · <strong>N</strong> non conforme · <strong>NA</strong> non applicabile.</p>
 <h2 id="percepibile">Percepibile</h2>
 <p>Le informazioni si devono poter vedere, sentire o leggere in più di un modo.</p>
 <div class="tw"><table>
@@ -94,8 +94,8 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>1.3.2 Sequenza significativa (A)</td>
-<td>NV</td>
-<td>L'ordine nel codice segue quello che si vede: pulsanti, titolo, altoparlante; poi il contenuto. Va confermato con TalkBack.</td>
+<td>C (M, C)</td>
+<td>Con TalkBack l'ordine di lettura segue quello che si vede: pulsanti, titolo, altoparlante; poi il contenuto.</td>
 </tr>
 <tr>
 <td>1.3.3 Caratteristiche sensoriali (A)</td>
@@ -129,8 +129,8 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>1.4.4 Ridimensionamento del testo (AA)</td>
-<td>NV</td>
-<td>Il testo del libro va da 14 a 28 sp con la barra del pannello Testo. Il carattere di sistema al 200% non l'abbiamo ancora provato sull'interfaccia.</td>
+<td>C (M)</td>
+<td>Con il carattere di sistema al 200% l'interfaccia resta leggibile e usabile. Il testo del libro va da 14 a 28 sp con la barra del pannello Testo.</td>
 </tr>
 <tr>
 <td>1.4.5 Immagini di testo (AA)</td>
@@ -139,8 +139,8 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>1.4.10 Ricomposizione (AA)</td>
-<td>P (F, G)</td>
-<td>Sul telefono a 360 dp nessuna schermata scorre di lato e i titoli vanno a capo. Manca la prova con il carattere al 200%.</td>
+<td>C (M, F, G)</td>
+<td>Sul telefono a 360 dp, anche con il carattere al 200%, nessuna schermata scorre di lato e le scritte vanno a capo senza tagli.</td>
 </tr>
 <tr>
 <td>1.4.11 Contrasto non testuale (AA)</td>
@@ -175,12 +175,12 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <tbody>
 <tr>
 <td>2.1.1 Tastiera (A)</td>
-<td>C (prova a mano)</td>
+<td>C (M)</td>
 <td>Con una tastiera collegata al tablet, Tab e le frecce raggiungono ogni comando: barra del titolo, altoparlanti, copertine, capitoli, comandi di lettura. Invio li attiva.</td>
 </tr>
 <tr>
 <td>2.1.2 Nessuna trappola per la tastiera (A)</td>
-<td>C (prova a mano)</td>
+<td>C (M)</td>
 <td>Esc fa come Indietro: chiude la finestra o il pannello aperto, poi torna alla pagina prima. Tab continua sempre e ricomincia dall'inizio.</td>
 </tr>
 <tr>
@@ -215,7 +215,7 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>2.4.3 Ordine del fuoco (A)</td>
-<td>C (prova a mano)</td>
+<td>C (M)</td>
 <td>Il fuoco segue l'ordine che si vede: Indietro, Ascolta, Aiuti, Testo, altoparlante, poi i comandi di lettura dall'alto in basso.</td>
 </tr>
 <tr>
@@ -235,12 +235,12 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>2.4.7 Fuoco visibile (AA)</td>
-<td>C (prova a mano, F)</td>
+<td>C (M, F)</td>
 <td>Il comando con il fuoco ha un contorno giallo (Lanterna) di 3 dp; anche le copertine e le righe dei capitoli.</td>
 </tr>
 <tr>
 <td>2.4.11 Fuoco non nascosto (AA)</td>
-<td>C (prova a mano)</td>
+<td>C (M)</td>
 <td>Il comando con il fuoco resta visibile: le liste scorrono per mostrarlo e i pannelli non coprono la barra dei comandi.</td>
 </tr>
 <tr>
@@ -369,8 +369,8 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <tbody>
 <tr>
 <td>4.1.2 Nome, ruolo, valore (A)</td>
-<td>P (C, G)</td>
-<td>Ogni tessera dice cos'è (pulsante, scelta, casella) e se è scelta. Manca la prova completa con TalkBack.</td>
+<td>C (M, C, G)</td>
+<td>Con TalkBack ogni tessera dice cos'è (pulsante, scelta, casella) e se è scelta; i gruppi di scelte dicono quanti elementi hanno.</td>
 </tr>
 <tr>
 <td>4.1.3 Messaggi di stato (AA)</td>
@@ -422,12 +422,9 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 </tbody>
 </table></div>
-<h2 id="cosa-manca-ancora">Cosa manca ancora</h2>
+<h2 id="punti-aperti">Punti aperti</h2>
 <ul>
-<li><strong>Prova con TalkBack</strong> su ogni schermata: ordine di lettura, nomi, ruoli, stati, messaggi (1.3.2, 4.1.2).</li>
-<li><strong>Carattere di sistema al 200%</strong>: nessuna scritta deve essere tagliata (1.4.4, 1.4.10).</li>
-<li><strong>Tastiera sul telefono</strong>: provata sul tablet; il codice è lo stesso, ma la prova sul telefono manca.</li>
-<li><strong>AAA</strong>: spazio tra i paragrafi (1.4.8) e avvisi che restano finché non tocchi altrove (2.2.3).</li>
+<li><strong>1.4.8 Presentazione visiva (AAA)</strong>: lo spazio tra i paragrafi del lettore deve essere almeno 1,5 volte l'interlinea. Va misurato e, se serve, allargato.</li>
 </ul>
 <p>Rifacciamo questa valutazione a ogni versione che cambia l'interfaccia. Se trovi un problema, <a data-repo-path="issues/new?template=app.yml" href="../#segnala">scrivicelo</a>.</p>
 <h2 id="i-bollini">I bollini</h2>
