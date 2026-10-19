@@ -21,3 +21,4 @@
 .doc .simboli { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 12px; }
 .doc .simboli li { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); text-align: center; font-size: .9rem; font-weight: 700; }
 .doc .simboli svg { width: 40px; height: 40px; color: var(--fg); }
+.doc img.logo-w3c { border: 0; border-radius: 0; background: none; width: 176px; height: auto; }
