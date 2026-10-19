@@ -29,9 +29,9 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <h2 id="in-breve">In breve</h2>
 <ul>
 <li><strong>Livello cercato</strong>: WCAG 2.2 <strong>AA</strong>, più sei criteri AAA utili a chi è dislessico.</li>
-<li><strong>Esito</strong>: su 55 criteri A e AA, <strong>47 conformi</strong>, 8 non applicabili, <strong>nessuno parzialmente conforme o non conforme</strong>. Il team di Farō dichiara Farō Reader 0.4 <strong>conforme a WCAG 2.2 livello AA</strong>.</li>
+<li><strong>Esito</strong>: su 55 criteri A e AA, <strong>46 conformi</strong>, 1 parzialmente conforme (1.4.4: carattere al 200% sul telefono), 8 non applicabili, nessuno non conforme. Sugli schermi da tablet tutti i criteri applicabili sono conformi.</li>
 <li><strong>Data</strong>: 18 ottobre 2026. <strong>Versione valutata</strong>: 0.4 (versione di prova del 18 ottobre 2026).</li>
-<li><strong>Autocertificazione</strong>: il team di Farō ha verificato l'app e autocertifica la versione 0.4 e il livello WCAG 2.2 AA. Non l'ha controllata un ente esterno.</li>
+<li><strong>Autocertificazione</strong>: il team di Farō ha verificato l'app e autocertifica la versione 0.4 al livello WCAG 2.2 AA sugli schermi da tablet (lato corto di almeno 600 dp); sul telefono resta aperto il criterio 1.4.4. Non l'ha controllata un ente esterno.</li>
 </ul>
 <h2 id="come-labbiamo-controllato">Come l'abbiamo controllato</h2>
 <div class="tw"><table>
@@ -129,8 +129,8 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </tr>
 <tr>
 <td>1.4.4 Ridimensionamento del testo (AA)</td>
-<td>C (M)</td>
-<td>Con il carattere di sistema al 200% l'interfaccia resta leggibile e usabile. Il testo del libro va da 14 a 28 sp con la barra del pannello Testo.</td>
+<td>P (M)</td>
+<td>Con il carattere di sistema al 200% l'interfaccia resta leggibile e usabile sugli schermi da tablet. Sul telefono qualche scritta non si legge intera. Il testo del libro va da 14 a 28 sp con la barra del pannello Testo.</td>
 </tr>
 <tr>
 <td>1.4.5 Immagini di testo (AA)</td>
@@ -140,7 +140,7 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 <tr>
 <td>1.4.10 Ricomposizione (AA)</td>
 <td>C (M, F, G)</td>
-<td>Sul telefono a 360 dp, anche con il carattere al 200%, nessuna schermata scorre di lato e le scritte vanno a capo senza tagli.</td>
+<td>Sul telefono a 360 dp nessuna schermata scorre di lato e le scritte vanno a capo; con il carattere al 200% vale quanto detto per 1.4.4.</td>
 </tr>
 <tr>
 <td>1.4.11 Contrasto non testuale (AA)</td>
@@ -424,6 +424,7 @@ Le WCAG 2.2 sono le regole internazionali del W3C per rendere accessibili siti e
 </table></div>
 <h2 id="punti-aperti">Punti aperti</h2>
 <ul>
+<li><strong>1.4.4 Ridimensionamento del testo (AA)</strong>: sul telefono, con il carattere di sistema al 200%, qualche scritta non si legge intera.</li>
 <li><strong>1.4.8 Presentazione visiva (AAA)</strong>: lo spazio tra i paragrafi del lettore deve essere almeno 1,5 volte l'interlinea. Va misurato e, se serve, allargato.</li>
 </ul>
 <p>Rifacciamo questa valutazione a ogni versione che cambia l'interfaccia. Se trovi un problema, <a data-repo-path="issues/new?template=app.yml" href="../#segnala">scrivicelo</a>.</p>

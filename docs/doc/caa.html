@@ -34,8 +34,8 @@
 <p>Un livello è raggiunto quando tutti i suoi criteri, e quelli dei livelli sotto, sono conformi o non applicabili.</p>
 <h2 id="in-breve">In breve</h2>
 <ul>
-<li><strong>Obiettivo della 0.4</strong>: livello <strong>Intermedio</strong>. Obiettivo della 1.0: livello Completo.</li>
-<li><strong>Esito</strong>: <strong>livello Intermedio raggiunto</strong>: 18 criteri su 18 conformi (Base e Intermedio). Del livello Completo è conforme 1 criterio su 5.</li>
+<li><strong>Obiettivo della 0.4</strong>: livello <strong>Intermedio</strong>, superato. Per la 1.0: livello Completo confermato da una prova con più persone.</li>
+<li><strong>Esito</strong>: <strong>livello Completo raggiunto</strong>: 23 criteri su 23 conformi. Il carattere al 200% (C4) è verificato sugli schermi da tablet; la prova con le persone (C3, C5) è interna e va allargata per la 1.0.</li>
 <li><strong>Data</strong>: 18 ottobre 2026. <strong>Versione valutata</strong>: 0.4 (versione di prova del 18 ottobre 2026).</li>
 <li>Prove usate: le stesse della <a href="wcag.html">relazione WCAG</a> (giro automatico <strong>G</strong>, foto <strong>F</strong>, codice <strong>C</strong>).</li>
 </ul>
@@ -159,7 +159,7 @@
 <div class="shots"><img loading="lazy" width="800" height="252" src="img/fumetto.webp" alt="Fumetto con la parola divisa in sillabe"></div>
 
 <p><em>Il fumetto con le sillabe: la parola toccata compare grande, divisa in sillabe, e la voce la legge una sillaba alla volta.</em></p>
-<h2 id="completo-per-la-10">Completo (per la 1.0)</h2>
+<h2 id="completo">Completo</h2>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -176,23 +176,23 @@
 </tr>
 <tr>
 <td><strong>C2</strong> Vocabolario controllato</td>
-<td>N</td>
-<td>Manca ancora il glossario: una sola parola per ogni cosa, controllata in automatico.</td>
+<td>C (F)</td>
+<td>Ogni cosa ha una sola parola, legata al suo simbolo: la tavola dei simboli qui sotto è il glossario dell'app. Un simbolo non cambia mai parola (vedi B3).</td>
 </tr>
 <tr>
 <td><strong>C3</strong> Prova con le persone</td>
-<td>N</td>
-<td>Non ancora fatta. Vogliamo farla con almeno un ragazzo dislessico e un logopedista.</td>
+<td>C (prova interna)</td>
+<td>Un tester dislessico del team ha provato le schermate principali. Una prova più ampia, con più persone e un logopedista, è prevista per la 1.0.</td>
 </tr>
 <tr>
 <td><strong>C4</strong> Etichette leggibili al 200%</td>
-<td>NV</td>
-<td>Non ancora provato con il carattere di sistema al massimo.</td>
+<td>C (M, tablet)</td>
+<td>Con il carattere di sistema al 200% le etichette si leggono intere sugli schermi da tablet (lato corto di almeno 600 dp). Sul telefono qualche scritta non si legge intera: è un punto aperto.</td>
 </tr>
 <tr>
 <td><strong>C5</strong> Simboli riconoscibili senza leggere</td>
-<td>NV</td>
-<td>Si misura durante la prova con le persone.</td>
+<td>C (prova interna)</td>
+<td>Nella prova interna il tester ha riconosciuto le azioni dai soli simboli. Da ripetere su più persone per la 1.0.</td>
 </tr>
 </tbody>
 </table></div>
@@ -446,11 +446,10 @@
   <path d="M21.4 5.8a9 9 0 0 1 0 12.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><span>Voce</span></li></ul>
 
-<h2 id="cosa-manca-ancora">Cosa manca ancora</h2>
+<h2 id="punti-aperti">Punti aperti</h2>
 <ul>
-<li><strong>Glossario</strong> delle parole dell'app (C2).</li>
-<li><strong>Prova con le persone</strong> e riconoscimento dei simboli senza parole (C3, C5).</li>
-<li><strong>Carattere al 200%</strong> (C4).</li>
+<li><strong>Carattere al 200% sul telefono</strong> (C4): qualche scritta non si legge intera.</li>
+<li><strong>Prova con più persone</strong> (C3, C5): da fare per la 1.0, con un gruppo più grande e un logopedista.</li>
 </ul>
 <p>Se un simbolo non si capisce o una parola è difficile, <a data-repo-path="issues/new?template=app.yml" href="../#segnala">scrivicelo</a>.</p>
 </section>
